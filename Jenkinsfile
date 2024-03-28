@@ -4,11 +4,11 @@ node {
      }
 
      stage('Build image') {
-         app = docker.build("MyFirstPipeline") //이미지 이름 설정
+         app = docker.build("my-first-pipeline") //이미지 이름 설정
      }
      stage('Push image') {
                 script {
-                    sh 'docker run -d -p 18000:18000 MyFirstPipeline'
+                    sh 'docker run -d -p 18000:18000 my-first-pipeline'
                 }
      }
  }
